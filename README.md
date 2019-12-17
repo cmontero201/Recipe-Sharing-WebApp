@@ -11,7 +11,7 @@ This project aims to create a web application that satisfies the following featu
   - Title, embedded video, text description, text ingredient list (bullet), text recipe instruction (numbered)
 - User may search for posts bases on post titles and ingredient lists.
 - User may favorite other recipe posts and view them on a favorites page.
-- Site will have a main page feed that will load 10 of the most recent posts initially. As the user scrolls to the bottom of the feed, 10 more posts will be displayed.
+- Site will have a main page feed that will load 10 of the most recent posts initially. As the user scrolls to the bottom of the feed, 10 more posts will be displayed (infinite scroll).
 
 ## Unique Features:
 - User may rate any post once anonymously. Each post will display the average user rating on the main feed or on the recipe's details page.
