@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<section>
+    <div class="indiv">
+        {{#if posts.image}}
+        <div class="imagePost">
+            <h1> {{posts.title}}</h1>
+            <h2> {{posts.postDate}} </h3>
+            <img src={{posts.image}} alt="IMAGE" height="400" width="400">   
+            <p> {{posts.postDesc}}</p>
+            <hr>  
+                <ul> 
+                {{#each posts.ingredients}} 
+                <li> {{ this }} </li>
+                {{/each}}
+                </ul>
+            <hr>
+                <ol> 
+                {{#each posts.directions}}
+                <li> {{ this }} </li>
+                {{/each}}
+                </ol>
+        </div>
+        {{else}}
+            {{#if posts.video}}
+            <div class="post">
+                <h1> {{posts.title}}</h1>
+                <h2> {{posts.postDate}} </h2>
+                <iframe height="400" width="400" src={{posts.video}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p> {{posts.postDesc}}</p>
+                <hr>
+                    <ul>
+                    {{#each posts.ingredients}} 
+                    <li> {{ this }} </li>
+                    {{/each}}
+                    </ul>
+                <hr>
+                    <ol> 
+                    {{#each posts.directions}}
+                    <li> {{ this }} </li>
+                    {{/each}}
+                    </ol>
+            </div>
+            {{else}}
+            <div class="textPost">
+                <h1> {{posts.title}}</h1>
+                <h2> {{posts.postDate}} </h2>
+                <p> {{posts.postDesc}}</p>
+                <hr>
+                <ul>
+                {{#each posts.ingredients}} 
+                <li> {{ this }} </li>
+                {{/each}}
+                </ul>
+                
+                <hr>
+                <ol>
+                {{#each posts.directions}}
+                <li> {{ this }} </li>
+                {{/each}}
+                </ol>
+
+            </div>
+            {{/if}}   
+        {{/if}}
+    </div>
+</section>

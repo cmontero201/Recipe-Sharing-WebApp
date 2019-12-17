@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DASHBOARD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "../../public/css/site.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+
+  <body>
+    <div>        
+      <div class="navbar">    
+     
+          <form class="form" action="/auth/search" method="POST">
+          <a id="logo" href="/auth/dashboard"> RECIPE WEBSITE!</a>
+          <label for = "search"> Search Recipes </label>            
+          <input type = "text" name = "search" id = "search"/>
+          <button type = "submit" name = "submit"> Search </button>
+          </form>
+
+          <a id="post" href="/posts/newPost">New Post</a>
+          <a href="/auth/likes">Favorites</a>
+          <a href="/auth/private/my_profile">Profile</a>
+          <a href="/logout" class="right">Logout</a>
+         
+
+        </div>
+    
+            <div class="container">
+            {{{body}}}
+            </div>
+
+        </div>
+
+    </body>
+
+    
+</html>

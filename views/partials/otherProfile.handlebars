@@ -1,0 +1,50 @@
+
+    <div class="userInfoCont"> 
+        <h1> {{userInfo.firstName}}</h1>
+        <p> {{userInfo.bio}}</p>
+
+    </div>
+    <div class="profileCont"> 
+        {{#each posts}}
+            <ul>
+                {{#if this.image}}
+                <div class="imagePost">
+
+                    <form action="/auth/addLike/{{_id}}" method="POST">
+                    <button type="submit">FAVORITE</button>
+                    </form>
+                    <img src= {{image}} alt="IMAGE" height="400" width="400">
+                    <h1> {{title}}</h1>
+                    <p> {{postDesc}}</p>
+                </div>
+
+                {{else}}
+                    {{#if this.video}}
+                    <div class="videoPost">
+
+                        <form action="/auth/addLike/{{_id}}" method="POST">
+                        <button type="submit">FAVORITE</button>
+                        </form>
+                        <iframe width="560" height="315" src={{video}} frameborder="0"></iframe>
+                        <h1> {{title}}</h1>
+                        <p> {{postDesc}} </p>
+                    </div>
+
+                    {{else}}
+                    <div class="textPost">
+
+                        <form action="/auth/addLike/{{_id}}" method="POST">
+                        <button type="submit">FAVORITE</button>
+                        </form>
+                        <h1> {{title}}</h1>
+                        <p> {{postDesc}}</p>
+                        <p> {{image}} </p>
+                    </div>
+                    {{/if}}   
+                {{/if}}
+            </ul>
+            {{/each}}
+    </div> 
+
+
+

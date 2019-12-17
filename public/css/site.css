@@ -1,0 +1,384 @@
+head {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    text-align: center;
+    font-size: 24; 
+    /* display: flex; */
+    height: 25px;
+    
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    text-align: center;
+    font-size: 24;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h6 {
+  background-color: white
+}
+
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  text-align: center;
+  font-size: 16; 
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+body {
+  margin: 0px 0px 0px 0px;
+  background-color: rgb(240, 240, 240);
+}
+
+
+.navbar a {
+  font-size: 11pt;
+  font-family:'Arial Bold', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.75px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.navbar [id="logo"] {
+  font-size: 11pt;
+  font-family:'Arial Bold', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.75px;
+  font-weight: bold;
+
+}
+.navbar [id="post"]{
+  padding-left: 60px;
+}
+.navbar {
+  width: 100%;
+  height: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;  
+  background-color: rgba(63, 128, 50, 0.783);
+  border-radius: 0px 0px 5px 5px;
+}
+.navbar form {
+  display: inline;
+  padding-right: 70px;
+
+}
+.navbar form label {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 15px;
+  align-content: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5pt;
+  display: inline-block;
+  border-radius: 15%;
+  color: white;
+}
+.navbar form input {
+  width: 40%;
+  height: 35px;
+  border: none;
+  font-size: 12pt;
+
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.navbar form button {
+  border-radius: 5px 5px 5px 5px;
+  height: 30px;
+  width: 60px;
+  border: none;
+}
+
+
+.container {
+  width: 50%;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 45px;
+}
+
+
+
+.postContainer form {
+  display: inline;
+  float: left;
+
+}
+.postContainer h1 {
+  margin: auto;
+  background-color:  rgb(240, 240, 240);
+  padding: 10px;
+}
+.postContainer button {
+  margin-left: 30px;
+  margin-right: 580px;
+}
+.postContainer a {
+  font-size: 11pt;
+  font-family:'Arial Bold', sans-serif;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.postContainer [id = "poster"] {
+  margin: 30px;
+  font-size: 10.5pt;
+  font-style: oblique;
+  padding: 0px;
+}
+.postContainer p {
+  margin: auto;
+  background-color:  rgb(240, 240, 240);
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+.postContainer p[id="likes"] {
+  display: inline;
+  font-size: 9pt;
+  font-style: oblique;
+  padding: 0px;
+  color: darkred;
+}
+.imagePost {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 3px solid;
+  border-color: darkgrey;
+  padding: 20px;
+  height: 30%;
+  margin-top: 15px;
+}
+.textPost {
+  font-family: Arial, Helvetica, sans-serif;
+  float: center;
+  border: 3px solid;
+  border-color: darkgrey;
+  padding: 20px;  
+  height: 30%;  
+  margin-top: 15px;
+
+}
+.videoPost {
+  font-family: Arial, Helvetica, sans-serif;
+  float: center;
+  border: 3px solid;
+  border-color: darkgrey;
+  padding: 20px;
+  height: 30%;
+  margin-top: 15px;
+}
+
+
+
+.newPost input {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 30px;
+  width: 600px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.newPost label {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14pt;
+  background-color:  rgb(240, 240, 240);
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+.newPost h2 {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 11pt;
+}
+
+.newPost textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 300px;
+  padding: 5px;
+}
+.newPost [type="submit"] {
+  width: 400px;
+  height: 105px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.newPost button[class='sendUpdate'] {
+  width: 265px;
+  height: 60px;
+  margin: auto;
+  display: block;
+}
+.newPost p {
+  font-size: 14pt;
+  background-color:  rgb(240, 240, 240);
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.newPost {
+  width: 100%;
+}
+
+
+
+.indiv {
+  margin-bottom: 50px;
+}
+
+.indiv imagePost {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 3px solid;
+  border-color: darkgrey;
+  padding: 20px;
+  height: 30%;
+  margin-top: 15px;
+}
+
+.indiv textPost {
+  font-family: Arial, Helvetica, sans-serif;
+  float: center;
+  border: 3px solid;
+  border-color: darkgrey;
+  padding: 20px;  
+  height: 30%;  
+  margin-top: 15px;
+}
+.indiv videoPost {
+  font-family: Arial, Helvetica, sans-serif;
+  float: center;
+  border: 3px solid;
+  border-color: darkgrey;
+  padding: 20px;
+  height: 30%;
+  margin-top: 15px;
+}
+.indiv h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  background-color:  rgb(240, 240, 240);
+  margin-bottom: 0px;
+}
+.indiv h2 {
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  display: block;
+  background-color:  rgb(240, 240, 240);
+  font-style: oblique;  
+}
+.indiv p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13pt;
+  background-color:  rgb(240, 240, 240);
+}
+
+.userInfoCont {
+  width: 100%;
+  margin: auto;
+  border: 2px;
+  border-color: black;
+}
+.userInfoCont form {
+  display: inline;
+  margin-right: 30px;
+}
+.userInfoCont button {
+  width: 100px;
+  height: 25px;
+}
+.userInfoCont button[id="del"] {
+  margin-left: 635px;
+}
+.userInfoCont h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  background-color:  rgb(240, 240, 240);
+  margin-bottom: 0px;
+}
+.userInfoCont p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13pt;
+  background-color:  rgb(240, 240, 240);
+}
+
+
+.profileCont {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+}
+.profileCont ul {
+  padding: 0px
+}
+.profileCont p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13pt;
+  background-color:  rgb(240, 240, 240);
+}
+.profileCont form {
+  display:inline;
+}
+.profileCont h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  background-color:  rgb(240, 240, 240);
+  margin-bottom: 0px;
+}
+.profileCont h2 {
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  display: block;
+  background-color:  rgb(240, 240, 240);
+  font-style: oblique;  
+}
+.profileCont button {
+  width: 75px;
+  height: 25px;
+}
+.profileCont button[id="del"] {
+  margin-right: 30px;
+  margin-left: 600px;
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<section>
+    <div class="newPost">
+        <form action="/posts/update/{{postId}}" method="POST" id="post-form">
+            <label for="title">Update Title</label> 
+            <input type="text" id="title" name="title" placeholder="">
+            
+            <label for="desc"> Update Description</label>
+            <input type="text" id="desc" name="desc" placeholder="">
+
+            <label for="image">Update Image</label> 
+            <input type="url" id="image" name="image" placeholder="Enter an image URL for your recipe!">
+
+            <label for="video">Update Video</label>  
+            <input type="url" id="video" name="video" placeholder="Enter a youtube video URL for your recipe!">
+
+            <label for="ingredients">Update Ingredients To seperate ingredients, start typing on a new line (press enter)</label> 
+            <textarea id="ingredients" name="ingredients" placeholder="Enter One Ingredient Per Line.."></textarea>
+
+            <label for="directions">Update Directions To seperate directions, start typing on a new line (press enter)</label> 
+            <textarea id="directions" name="directions" placeholder="Enter One Step Per Line.."></textarea>
+
+            <input type="submit" value="Submit">
+            
+        </form>
+    </div>
+</section>

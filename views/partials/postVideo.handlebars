@@ -1,0 +1,20 @@
+
+    <div class="videoPost">
+        
+        <iframe width="560" height="315" src={{video}} frameborder="0"></iframe>
+
+        <h1 class="topright"> {{title}}</h1>
+
+        <a id="poster" href ='/users/posts-by/{{userId}}'> POSTED BY: {{username}} </a>     
+        <p id="likes"> {{numberOfLikes}} Likes </p>
+        <p> {{postDesc}}</p>
+
+        <form action="/auth/addLike/{{_id}}" method="POST">
+        <button type="submit">FAVORITE</button>
+        </form>
+        
+        <a href ='/posts/{{_id}}'> View Post </a>
+
+
+    </div>
+    

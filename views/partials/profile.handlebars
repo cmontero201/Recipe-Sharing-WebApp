@@ -1,0 +1,67 @@
+
+    <div class="userInfoCont"> 
+        <h1> {{userInfo.firstName}}</h1>
+        <p> {{userInfo.bio}}</p>
+        <button onclick="location.href = 'http://localhost:3000/users/update';"> Update Profile </button>
+        <form action="/users/del/{{userInfo._id}}" method="POST">
+        <button id="del" type="submit"> Delete Profile</button>
+        </form>
+
+    </div>
+    <div class="profileCont"> 
+        {{#each posts}}
+            <ul>
+                {{#if this.image}}
+                <div class="imagePost">
+                    <img src= {{image}} alt="IMAGE" height="400" width="400">
+                    <h1> {{title}}</h1>
+                    <h2> {{postDate}} </h2>
+                    <p> {{postDesc}}</p>
+                                    
+                    <form action="/posts/update/{{_id}}" method="GET">
+                    <button type="submit">Edit</button>
+                    </form>
+                    <form action="/posts/del/{{_id}}" method="POST">
+                    <button id="del" type="submit">Delete</button>
+                    </form>
+                    
+                </div>
+
+                {{else}}
+                    {{#if this.video}}
+                    <div class="videoPost">
+                        <iframe width="560" height="315" src={{video}} frameborder="0"></iframe>
+                        <h1> {{title}}</h1>
+                        <h2> {{postDate}} </h2>
+                        <p> {{postDesc}} </p>
+
+                        <form action="/posts/update/{{_id}}" method="GET">
+                        <button type="submit">Edit</button>
+                        </form>
+                        <form action="/posts/del/{{_id}}" method="POST">
+                        <button id="del" type="submit">Delete</button>
+                        </form>
+                        
+                    </div>
+
+                    {{else}}
+                    <div class="textPost">
+                        <h1> {{title}}</h1>
+                        <h2> {{postDate}} </h2>
+                        <p> {{postDesc}}</p>
+
+                        <form action="/posts/update/{{_id}}" method="GET">
+                        <button type="submit">Edit</button>
+                        </form>
+                        <form action="/posts/del/{{_id}}" method="POST">
+                        <button id="del" type="submit">Delete</button>
+                        </form>
+
+                    </div>
+                    {{/if}}   
+                {{/if}}
+            </ul>
+            {{/each}}
+    </div> 
+
+

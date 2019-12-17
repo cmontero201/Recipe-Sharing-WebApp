@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+
+    <form action="/users/update" method="POST" id="update-form">
+    <div class="newPost">
+        <p>Please fill in this form to update your profile. To clear your last name or bio, enter a space in it's respective field.
+            You may update any of the fields below, but you may not clear your first name or email.
+        </p>
+        <hr>
+        
+        <label for="firstName"><b>Update First Name</b></label>
+        <input type="text" id="firstName" placeholder="Name" name="firstName">
+
+        <label for="lastName"><b>Update Last Name</b></label>
+        <input type="text" id="lastName" placeholder="Last Name" name="lastName">
+
+        <label for="email"><b>Update Email</b></label>
+        <input type="text" id="email" placeholder="Enter Email" name="email">
+
+        <label for="bio"><b>Update About Me</b></label>
+        <input type="text" id="bio" placeholder="" name="bio">
+    
+        <div class="clearfix">
+            <button type="submit" class="sendUpdate">Update Fields</button>
+        </div>
+    
+    </div>
+    </form>      
+
+
+

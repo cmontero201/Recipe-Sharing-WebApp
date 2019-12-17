@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<section>
+
+  <h1> {{ title }} </h1>
+  
+  <div class = "personInfo">
+    
+    <h2> {{ user.firstName }} {{ user.lastName }} </h2>
+    
+    <dl>
+      <dt> ID </dt>
+      <dd> {{ user.id }} </dd>
+      <dt> First Name </dt>
+      <dd> {{ user.firstName }} </dd>
+      <dt> Last Name </dt>
+      <dd> {{ user.lastName }} </dd>
+      <dt> Email </dt>
+      <dd> {{ user.email }} </dd>
+      <dt> Bio </dt>
+      <dd> {{ user.bio }} </dd>
+      <dt> Posts </dt>
+      <dd> {{ user.posts }} </dd>
+      <dt> Likes </dt>
+      <dd> {{ user.likes }} </dd>
+    </dl> 
+
+    <li>
+      <a href="/"><button> New Search </button></a> 
+    </li>
+
+  </div>
+
+</section>

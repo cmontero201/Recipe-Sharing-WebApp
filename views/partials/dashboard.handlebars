@@ -1,0 +1,74 @@
+<section>
+    <div class="postContainer"> 
+        {{#each posts}}
+                {{#if this.image}}
+                <div>
+                    {{> postImage }} 
+                </div>
+                {{else}}
+                    {{#if this.video}}
+                    <div>
+                        {{> postVideo }} 
+                    </div>
+                    {{else}}
+                    <div>
+                        {{> postText }} 
+                    </div>
+                    {{/if}}   
+                {{/if}}
+        {{/each}}
+    </div> 
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+     <script>
+
+           window.onscroll = function(ev) {
+               var count = 10;
+               if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight - 300) {
+                   // you're at the bottom of the page
+                   console.log("Bottom of page");
+                   console.log(document.URL)
+                   if (document.URL == "http://localhost:3000/auth/dashboard") {
+                       let load = getMore(count)
+                        count += 10;
+                   } else {
+                       return;
+                   }
+                   
+               }
+           };
+
+           function getMore(count) {
+               let x = document.getElementsByClassName("postContainer")[0].childElementCount
+
+               $.getJSON("http://localhost:3000/auth/dashboard/"+x, function( json ) {
+
+                   for (post of json.posts) {
+
+                       var div = document.createElement('div');
+
+                        if (post.image) {
+                           let st = ("<div class=imagePost><img src=" + post.image + "alt=IMAGE height=400 width=400> <h1>" + post.title + "</h1><a id=poster href='/users/posts-by/" + post.userId + "'> POSTED BY:" + post.username + "</a><p id=likes>" + post.numberOfLikes + " Likes </p><p>" + post.postDesc + "</p><form action=/auth/addLike/" + post._id + "method=POST> <button type=submit>FAV</button></form><a href ='/posts/" + post._id + "'> View Post </a></div>")
+                           div.innerHTML = st;
+                           document.getElementsByClassName("postContainer")[0].appendChild(div)
+
+                        } else if (post.video) {
+                           let st = ("<div class=videoPost><iframe width=560 height=315 src=" + post.video + "frameborder=0></iframe><h1>" + post.title +  "</h1><a id=poster href='/users/posts-by/" + post.userId + "'> POSTED BY:" + post.username + "</a><p id=likes>" + post.numberOfLikes + " Likes </p><p>" + post.postDesc + "</p><form action=/auth/addLike/" + post._id + "method=POST><button type=submit>FAVORITE</button></form><a href ='/posts/" + post._id + "'> View Post </a> </div>")
+                           div.innerHTML = st;
+                           document.getElementsByClassName("postContainer")[0].appendChild(div)
+
+                        } else {
+                            let st = ("<div class=textPost><h1>" + post.title + "</h1><a id=poster href='/users/posts-by/" + post.userId + "'> POSTED BY:" + post.username + "</a><p id=likes>" + post.numberOfLikes + " Likes </p><p>" + post.postDesc + "</p><form action=/auth/addLike/" + post._id + " method=POST><button type=submit>FAVORITE</button></form><a href ='/posts/" + post._id + "'> View Post </a></div>")
+                            div.innerHTML = st;
+    
+                            document.getElementsByClassName("postContainer")[0].appendChild(div)
+
+                        }
+                    }
+                });  
+            }
+           
+        </script>
+
+</section>
