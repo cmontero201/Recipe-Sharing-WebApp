@@ -18,7 +18,7 @@ This project aims to create a web application that meets the following features:
 - Every recipe posted by a user will be viewable by other users on a page.
 
 
-#RUNNING THE WEB APPLICATION
+# RUNNING THE WEB APPLICATION
 
 ###### To initiate the database and push sample data in project folder run:
 node tasks/seed.js
