@@ -1,7 +1,7 @@
 
 # Summer Session 2019 WS
 
-This project aims to create a RESTful web application that satisfies the following features:
+This project aims to create a web application that satisfies the following features:
 
 ## Core Features:
 - User must login to view posts; if the user does not have an account, they must sign up.
